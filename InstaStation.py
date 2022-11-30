@@ -25,7 +25,6 @@ def split_hashtag(areas, stations, df, save_dir):
     data = data.reset_index()
     data.columns = ['station', 'hashtag', 'area']
     data.to_csv(save_dir + '/hashtag.csv', encoding='utf-8-sig')
-    data = pd.read_csv(save_dir + '/hashtag.csv', index_col=0)
     data.to_parquet(save_dir + '/hashtag.parquet')
 
 # txt 파일 합치고 split 전처리

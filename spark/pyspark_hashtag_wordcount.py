@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[13]:
-
 
 # openjdk8 설치
 get_ipython().system('apt-get install openjdk-8-jdk-headless -qq > /dev/null')
@@ -36,7 +34,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.master("local[*]").getOrCreate()
 
 
-# 
+#
 
 # In[22]:
 
@@ -69,7 +67,7 @@ hashtag_df = hashtag_df.withColumn("index", monotonically_increasing_id())
 hashtag_df.show()
 
 
-# 
+#
 
 # In[73]:
 
@@ -91,11 +89,11 @@ for i in range(hashtag_df.count()):
 result_df.show()
 
 
-# 
-# 
+#
+#
 # ---
-# 
-# 
+#
+#
 
 # In[79]:
 

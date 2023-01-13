@@ -20,25 +20,11 @@
 # In[ ]:
 
 
-# 로컬에서 돌려야 돌아감
-
-
-# In[1]:
-
-
 import instaloader
 from itertools import dropwhile, takewhile
 from datetime import datetime
 from instaloader import *
 
-
-# In[2]:
-
-
-
-
-
-# In[2]:
 
 
 # 다운로드할 때 사진이나 영상은 제외
@@ -48,15 +34,8 @@ instance = instaloader.Instaloader(download_pictures=False,download_videos=False
 #instance.login(user="",passwd="")
 
 
-# In[3]:
-
-
 # 맛집 해시태그 n개 다운로드(최신 기준)
 instance.download_hashtag(hashtag="홍대입구",max_count=1000)
-
-
-# In[7]:
-
 
 # 해시태그 인기 게시물 가져오기
 

@@ -36,7 +36,7 @@ with DAG('hashtag_dag',
     print_starting = BashOperator(task_id='starting', bash_command='echo "start hashtag_dag"')
 
     # 인스타 크롤링 매주 1회
-    crawl_hashtag = PythonOperator(task_id='crawlInstagramHashtag', python_callable=crawlInstagramHashtagData)
+    crawl_hashtag = PythonOperator(task_id='crawlInstagramHashtagData', python_callable=crawlInstagramHashtagData)
 
     # 크롤링한 인스타그램 해시태그 데이터 전처리
     preprocess_hashtagData = PythonOperator(task_id='preprocessHashtagData', python_callable=preprocessHashtagData)

@@ -36,7 +36,7 @@ with DAG('subway_density_dag',
     print_starting = BashOperator(task_id='starting', bash_command='echo "start subway_density_dag"')
 
     # 지하철 혼잡도 api 크롤링
-    crawl_subway_data = PythonOperator(task_id='crawlSubwayDensity', python_callable=crawlSubwayData)
+    crawl_subway_data = PythonOperator(task_id='crawlSubwayData', python_callable=crawlSubwayData)
 
     # 크롤링한 지하철 데이터 전처리
     preprocess_subwayData = PythonOperator(task_id='preprocessSubwayData', python_callable=preprocessSubwayData)
